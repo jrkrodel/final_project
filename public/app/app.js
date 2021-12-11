@@ -200,8 +200,7 @@ function addToCart(index) {
     displayModal(`Added to Cart! (Total Items: ${cartItems})`);
   } else {
     displayModal(
-      "Please log in to add to cart",
-      "Click the <i class='login far fa-user fa-1x'></i>Icon"
+      "Please Sign in to add to Cart. Click the <i class='far fa-user'></i> icon"
     );
   }
 }
@@ -260,8 +259,7 @@ function initListeners() {
     if (loggedIn == false) {
       event.preventDefault();
       displayModal(
-        "Please Sign in to Access Cart",
-        "Click the <i class='login far fa-user fa-1x'></i>Icon"
+        "Please Sign in to Access Cart. Click the <i class='far fa-user'></i> icon"
       );
     }
   });
@@ -300,7 +298,9 @@ function route() {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     } else {
       window.location.hash = "#/coffeemakers";
-      displayModal("Please log in to access your cart");
+      displayModal(
+        "Please signin to access your cart <i class='far fa-user fa-2x'></i>"
+      );
     }
   } else if (pageID == "coffeemakers") {
     MODEL.changePage(pageID, loadCoffeeMakers);

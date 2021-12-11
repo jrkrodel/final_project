@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>keurig</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="cover"></div>
+
+    <div class="modal">
+      <div class="message"><h1>Item has been added to your cart</h1></div>
+    </div>
+    <section class="header">
+      <div class="dropdown-nav">
+        <i class="fas fa-bars fa-2x"></i>
+        <div class="links">
+          <i id="close-nav" class="fas fa-times fa-2x"></i>
+          <div class="dropdown-welcome"><h1>Welcome</h1></div>
+          <a href="#">COFFEE, TEA, & MORE</a>
+          <div class="line"></div>
+          <a href="#/coffeemakers">COFFEE MAKERS</a>
+          <div class="line"></div>
+          <a href="#">ACCESSORIES</a>
+          <div class="line"></div>
+          <a href="#">AUTO DELIVERY</a>
+          <div class="line"></div>
+          <a href="#">GET STARTED</a>
+          <div class="line"></div>
+          <a href="#">GIFT GUIDE</a>
+          <div class="line"></div>
+          <a href="#" class="red-text">DEALS<br /></a>
+          <a href="#">CUSTOMIZE</a>
+          <div class="line"></div>
+          <p>Quick Order</p>
+          <p>Register Coffee Maker</p>
+          <p>Support</p>
+        </div>
+      </div>
+      <img src="images/logo.svg" alt="" />
+      <div class="search-container">
+        <i class="fas fa-search fa-2x"></i>
+        <input
+          type="text"
+          class="search"
+          placeholder="Search hundreds of ways to brew..."
+        />
+      </div>
+      <div class="right-side">
+        <p>FREE SHIPPING $29+</p>
+        <i class="login far fa-user fa-2x">
+          <div class="login-form">
+            <div class="login-form-close">
+              <i class="fas fa-times fa-1x"></i>
+              <p>Close</p>
+            </div>
+            <div class="button-holder">
+              <button id="login-button" class="selected">LOG IN</button>
+              <button id="signup-button">SIGN UP</button>
+            </div>
+            <div class="login-form-container">
+              <input id="login-email" type="text" placeholder="Email" />
+              <input
+                id="login-password"
+                type="password"
+                placeholder="Password"
+              />
+              <button id="firebase-login" class="signin-button">SIGN IN</button>
+            </div>
+          </div>
+        </i>
+        <a href="#/cart"><i class="fas fa-shopping-cart fa-2x"></i> </a>
+        <h1 id="items">0</h1>
+      </div>
+    </section>
+    <nav>
+      <a href="#">COFFEE, TEA, & MORE</a>
+      <a href="#/coffeemakers">COFFEE MAKERS</a>
+      <a href="#">ACCESSORIES</a>
+      <a href="#">AUTO DELIVERY</a>
+      <a href="#">GET STARTED</a>
+      <a href="#">GIFT GUIDE</a>
+
+      <a class="red-text" href="#"> <i class="fas fa-tag red-text"></i>DEALS</a>
+      <a class="removable-link" href="#">CUSTOMIZE</a>
+    </nav>
+
+    <div id="app"></div>
+
+    <footer>
+      <div class="main-info">
+        <div class="support">
+          <div class="section-one">
+            <i class="fas fa-map-marker-alt"></i>
+            <h1>Find a Store</h1>
+          </div>
+          <h1 class="remove-display">&#8226;</h1>
+          <div class="section-two">
+            <h1>Customer Support: 866-901-BREW(2739)</h1>
+          </div>
+        </div>
+        <div class="socials">
+          <p>Follow Us</p>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="links-col">
+          <h1>Shop</h1>
+          <p>Coffee Makers</p>
+          <p>Beverages</p>
+          <h1 class="extra-margin">Orders</h1>
+          <p>Track your order</p>
+          <p>Returns</p>
+          <p>Auto Delivery Orders</p>
+        </div>
+        <div class="links-col">
+          <h1>Helpful Info</h1>
+          <p>Register Your Appliance</p>
+          <p>Support</p>
+          <p>Product Recall</p>
+          <p>Business Solution</p>
+          <p>Site Map</p>
+          <p>Contact Us</p>
+          <p>CA Privacy Rights</p>
+          <p>Do Not Sell My Personal Information</p>
+        </div>
+        <div class="links-col">
+          <h1>About Us</h1>
+          <p>About Us</p>
+          <p>News</p>
+          <p>Careers</p>
+          <p>Sustainability</p>
+          <p>Rewards Program</p>
+          <p>Accepted Payment</p>
+        </div>
+        <div class="links-col">
+          <div class="mailing-list">
+            <h1>Join our Mailing List</h1>
+            <p class="info">
+              Stay up-to-date with the latest news and new arrivals direct to
+              your inbox.
+            </p>
+            <div class="form-container">
+              <input type="text" placeholder="Your email" />
+              <button class="footer-button">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© 2021 Keurig Green Mountain, Inc. - All Rights Reserved</p>
+        <p>Terms of Use</p>
+        <p>Privacy Policy</p>
+        <p>Modern Slavery Act</p>
+      </div>
+    </footer>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.5.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.5.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.5.0/firebase-database-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.5.0/firebase-firestore-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.5.0/firebase-functions-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.5.0/firebase-messaging-compat.js"
+    ></script>
+    <script defer src="/__/firebase/9.5.0/firebase-storage-compat.js"></script>
+    <script
+      defer
+      src="/__/firebase/9.5.0/firebase-analytics-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.5.0/firebase-remote-config-compat.js"
+    ></script>
+    <script
+      defer
+      src="/__/firebase/9.5.0/firebase-performance-compat.js"
+    ></script>
+    <!-- 
+          initialize the SDK after all desired features are loaded, set useEmulator to false
+          to avoid connecting the SDK to running emulators.
+        -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="lib/jquery-3.6.0.min.js"></script>
+    <script src="app/model.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

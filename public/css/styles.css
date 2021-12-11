@@ -138,8 +138,7 @@ nav {
       right: -5px; }
     .header .right-side .login {
       position: relative;
-      z-index: 99;
-      cursor: pointer; }
+      z-index: 99; }
     .header .right-side .login-form {
       z-index: 99;
       display: none;
@@ -160,7 +159,8 @@ nav {
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
-        margin-bottom: 10px; }
+        margin-bottom: 10px;
+        cursor: pointer; }
         .header .right-side .login-form .login-form-close i {
           font-size: 20px;
           padding: 0;

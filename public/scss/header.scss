@@ -44,7 +44,6 @@
     .login {
       position: relative;
       z-index: 99;
-      cursor: pointer;
     }
     .login-form {
       z-index: 99;
@@ -68,6 +67,7 @@
         align-items: flex-end;
         justify-content: flex-start;
         margin-bottom: 10px;
+        cursor: pointer;
         i {
           font-size: 20px;
           padding: 0;

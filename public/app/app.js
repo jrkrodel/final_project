@@ -114,6 +114,10 @@ function logOutListener() {
       .auth()
       .signOut()
       .then(() => {
+        if (window.location.hash == "#/cart") {
+          console.log("test");
+          window.location.hash = "#/coffeemakers";
+        }
         $(".cover").css("display", "none");
         $(".login-form").css("display", "none");
         displayModal("Signed Out");
@@ -290,16 +294,16 @@ function route() {
   let pageID = hashTag.replace("#/", "");
   if (pageID == "") {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    MODEL.changePage("coffeemakers", loadCoffeeMakers);
+    MODEL.changePage("coffeemakers");
   } else if (pageID == "cart") {
     if (loggedIn == true) {
       MODEL.changePage(pageID, loadCart);
-
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     } else {
+      // window.location.hash = "#";
       window.location.hash = "#/coffeemakers";
       displayModal(
-        "Please signin to access your cart <i class='far fa-user fa-2x'></i>"
+        "Please Sign in to access your Cart. Click the <i class='far fa-user'></i> icon"
       );
     }
   } else if (pageID == "coffeemakers") {
@@ -354,7 +358,6 @@ $(document).ready(function () {
     let app = firebase.app();
     gsap.set($(".modal"), { opacity: 0 });
     checkForEmptyCart();
-    loadCoffeeMakers();
     initListeners();
     initFirebase();
     initLoginListeners();

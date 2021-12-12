@@ -32,7 +32,7 @@ p {
   top: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 2; }
+  z-index: 98; }
 
 @font-face {
   font-family: mont-reg;
@@ -118,9 +118,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
-    z-index: 99; }
+    position: relative; }
+    .header .right-side i {
+      position: relative;
+      z-index: 96; }
     .header .right-side #items {
+      z-index: 97;
       display: none;
       border-radius: 50%;
       padding: 13px;
@@ -461,21 +464,16 @@ nav {
     grid-gap: 8px; }
     .coffeemakers .coffeemakers-container .coffeemaker-card {
       min-height: 460px;
+      min-width: 100%;
       background-color: white;
       box-shadow: 0px 5px 25px 0px #d2d2d2;
       margin-bottom: 20px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
       flex-direction: column;
       padding: 10px; }
       .coffeemakers .coffeemakers-container .coffeemaker-card .title {
-        min-height: 55px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: flex-start; }
+        min-height: 55px; }
         .coffeemakers .coffeemakers-container .coffeemaker-card .title h1 {
           font-size: 16px;
           color: #333333;
@@ -486,17 +484,16 @@ nav {
         color: #333333;
         font-family: mont-reg; }
       .coffeemakers .coffeemakers-container .coffeemaker-card .coffee-image {
-        margin-top: 10px;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        width: 100%;
+        margin: 10px auto 0 auto;
+        width: 200px;
         height: 215px; }
       .coffeemakers .coffeemakers-container .coffeemaker-card button {
         cursor: pointer;
         border-radius: 3px;
-        width: 90%;
-        margin-left: 5%;
+        min-width: 100%;
         height: 50px;
         border: 2px solid #f1be48;
         background-color: transparent;
@@ -514,28 +511,25 @@ nav {
     display: none; }
   .coffeemakers .options .sort-by-container {
     display: none; }
-  .coffeemakers .banner {
-    margin-top: 60px; }
-    .coffeemakers .banner h1 {
-      font-size: 30px; }
-    .coffeemakers .banner p {
-      font-size: 10px; }
+  .coffeemakers .banner h1 {
+    font-size: 30px; }
+  .coffeemakers .banner p {
+    font-size: 10px; }
   .coffeemakers .coffeemakers-container {
-    grid-template-columns: repeat(auto-fill, 30%); }
-    .coffeemakers .coffeemakers-container .coffeemaker-card .coffee-image {
-      height: 250px; } }
+    grid-template-columns: repeat(auto-fill, 32%); } }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
+  .coffeemakers .banner {
+    margin-top: 60px; } }
+
+@media screen and (max-width: 850px) {
   .coffeemakers .coffeemakers-container {
-    grid-template-columns: repeat(auto-fill, 45%); } }
+    grid-template-columns: repeat(auto-fill, 48%); } }
 
 @media screen and (max-width: 495px) {
   .coffeemakers .coffeemakers-container {
     grid-template-columns: repeat(auto-fill, 90%);
-    justify-content: center; }
-    .coffeemakers .coffeemakers-container .coffeemaker-card .coffee-image {
-      height: 300px;
-      margin-bottom: 50px; } }
+    justify-content: center; } }
 
 footer {
   width: 89%;
@@ -771,7 +765,7 @@ footer {
   cursor: pointer;
   position: relative;
   display: none;
-  z-index: 98; }
+  z-index: 2; }
   .dropdown-nav .links {
     display: none;
     position: fixed;
@@ -800,8 +794,7 @@ footer {
     .dropdown-nav .links i {
       top: 33px;
       position: relative;
-      left: 12.5px;
-      z-index: 99; }
+      left: 12.5px; }
     .dropdown-nav .links .line {
       width: 100%;
       border-bottom: 1px solid #d2d2d2; }
@@ -840,8 +833,7 @@ footer {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  z-index: -1; }
+  align-items: flex-start; }
   .cart-content .no-items-header {
     font-family: mont-light;
     letter-spacing: 8px;
@@ -876,7 +868,8 @@ footer {
       align-items: center;
       justify-content: flex-start;
       position: relative;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      z-index: 1; }
       .cart-content .cart-container .cart-item .cart-item-image {
         background-image: url(../images/coffee_1.webp);
         height: 100px;
@@ -993,7 +986,7 @@ footer {
       .cart-content .cart-container .cart-item .cart-item-price {
         position: absolute;
         bottom: 10px;
-        left: 30px; } }
+        left: 15px; } }
 
 @media screen and (max-width: 375px) {
   .cart-content {
@@ -1002,13 +995,7 @@ footer {
       width: 100%; }
     .cart-content .cart-container .cart-item {
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-around;
       height: 400px;
-      padding: 15px; }
-      .cart-content .cart-container .cart-item .cart-item-image {
-        margin-left: 0; }
-      .cart-content .cart-container .cart-item .cart-item-price {
-        position: relative;
-        left: 0;
-        bottom: 0; } }
+      padding: 15px; } }

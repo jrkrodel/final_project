@@ -170,7 +170,7 @@ nav {
           color: #333333; }
         .header .right-side .login-form .login-form-close i:hover {
           background-color: white; }
-        .header .right-side .login-form .login-form-close p {
+        .header .right-side .login-form .login-form-close h1 {
           font-size: 16px;
           margin-left: 8px;
           margin-bottom: 0;
@@ -564,6 +564,8 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-evenly; }
+      footer .main-info .support .no-display {
+        display: none; }
       footer .main-info .support i {
         color: white;
         margin-right: 15px; }
@@ -582,7 +584,7 @@ footer {
       font-family: mont-light; }
     footer .main-info .socials {
       width: 200px;
-      margin-right: 80px;
+      margin-right: 50px;
       display: flex;
       align-items: center;
       justify-content: space-evenly; }
@@ -663,6 +665,10 @@ footer {
       font-style: italic;
       font-family: mont-light; }
 
+@media screen and (max-width: 1100px) {
+  footer {
+    width: 100%; } }
+
 @media screen and (max-width: 850px) {
   footer {
     width: 100%; }
@@ -695,7 +701,11 @@ footer {
             margin-left: 0;
             margin-right: 0;
             text-align: center;
-            font-weight: bold; }
+            font-weight: bold;
+            width: 150px; }
+          footer .main-info .support .section-one .no-display,
+          footer .main-info .support .section-two .no-display {
+            display: block; }
           footer .main-info .support .section-one i,
           footer .main-info .support .section-two i {
             position: absolute;
@@ -703,6 +713,8 @@ footer {
       footer .main-info .socials {
         margin-right: 0;
         margin-top: 25px; }
+        footer .main-info .socials p {
+          display: none; }
     footer .footer-links {
       flex-direction: column;
       align-items: flex-start;

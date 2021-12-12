@@ -294,13 +294,12 @@ function route() {
   let pageID = hashTag.replace("#/", "");
   if (pageID == "") {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    MODEL.changePage("coffeemakers");
+    MODEL.changePage("coffeemakers", loadCoffeeMakers);
   } else if (pageID == "cart") {
     if (loggedIn == true) {
       MODEL.changePage(pageID, loadCart);
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     } else {
-      // window.location.hash = "#";
       window.location.hash = "#/coffeemakers";
       displayModal(
         "Please Sign in to access your Cart. Click the <i class='far fa-user'></i> icon"

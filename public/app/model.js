@@ -3,7 +3,7 @@ var MODEL = (function () {
 
   var _changePage = function (page, callback) {
     if (page == "") {
-      $.get(`pages/home/home.html`, function (data) {
+      $.get(`pages/coffeemakers/coffeemakers.html`, function (data) {
         $("#app").html(data);
         if (callback) {
           callback();

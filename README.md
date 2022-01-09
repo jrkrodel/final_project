@@ -1,4 +1,4 @@
-# final_project
+# Keurig Site
 
 keurig site
 [Live Link](https://n315-jrk-final.web.app/)
